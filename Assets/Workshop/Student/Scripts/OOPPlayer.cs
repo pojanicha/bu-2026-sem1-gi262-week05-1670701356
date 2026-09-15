@@ -100,6 +100,8 @@ namespace Solution
             var enemies = mapGenerator.GetEnemies();
             //stundent exercise: sort enemies by remainning energy
 
+            Array.Sort(enemies, (a, b) => a.energy.CompareTo(b.energy));
+
             return enemies;
         }
         public void Attack(OOPEnemy _enemy)
